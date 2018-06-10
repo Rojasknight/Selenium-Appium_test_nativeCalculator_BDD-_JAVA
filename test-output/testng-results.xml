@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="26427" started-at="2018-06-10T17:19:30Z" finished-at="2018-06-10T17:19:56Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="26427" started-at="2018-06-10T17:19:30Z" finished-at="2018-06-10T17:19:56Z">
+      <class name="com.accenture.TestCalculatorF.TestCalculadora">
+        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:com.accenture.TestCalculatorF.TestCalculadora@16f7c8c1]" name="setUpAppium" is-config="true" duration-ms="14602" started-at="2018-06-10T17:19:30Z" finished-at="2018-06-10T17:19:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpAppium -->
+        <test-method status="PASS" signature="mytest()[pri:0, instance:com.accenture.TestCalculatorF.TestCalculadora@16f7c8c1]" name="mytest" duration-ms="9365" started-at="2018-06-10T17:19:44Z" finished-at="2018-06-10T17:19:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- mytest -->
+        <test-method status="PASS" signature="CleanUpAppium()[pri:0, instance:com.accenture.TestCalculatorF.TestCalculadora@16f7c8c1]" name="CleanUpAppium" is-config="true" duration-ms="2440" started-at="2018-06-10T17:19:54Z" finished-at="2018-06-10T17:19:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CleanUpAppium -->
+      </class> <!-- com.accenture.TestCalculatorF.TestCalculadora -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
