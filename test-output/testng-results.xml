@@ -2,20 +2,76 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26427" started-at="2018-06-10T17:19:30Z" finished-at="2018-06-10T17:19:56Z">
+  <suite name="Default suite" duration-ms="73557" started-at="2018-07-13T14:44:32Z" finished-at="2018-07-13T14:45:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26427" started-at="2018-06-10T17:19:30Z" finished-at="2018-06-10T17:19:56Z">
+    <test name="Default test" duration-ms="73557" started-at="2018-07-13T14:44:32Z" finished-at="2018-07-13T14:45:45Z">
       <class name="com.accenture.TestCalculatorF.TestCalculadora">
-        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:com.accenture.TestCalculatorF.TestCalculadora@16f7c8c1]" name="setUpAppium" is-config="true" duration-ms="14602" started-at="2018-06-10T17:19:30Z" finished-at="2018-06-10T17:19:44Z">
+        <test-method status="PASS" signature="setUpAppium()[pri:0, instance:com.accenture.TestCalculatorF.TestCalculadora@481a15ff]" name="setUpAppium" is-config="true" duration-ms="28902" started-at="2018-07-13T14:44:32Z" finished-at="2018-07-13T14:45:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpAppium -->
-        <test-method status="PASS" signature="mytest()[pri:0, instance:com.accenture.TestCalculatorF.TestCalculadora@16f7c8c1]" name="mytest" duration-ms="9365" started-at="2018-06-10T17:19:44Z" finished-at="2018-06-10T17:19:54Z">
+        <test-method status="PASS" signature="mytest()[pri:0, instance:com.accenture.TestCalculatorF.TestCalculadora@481a15ff]" name="mytest" duration-ms="41884" started-at="2018-07-13T14:45:01Z" finished-at="2018-07-13T14:45:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- mytest -->
-        <test-method status="PASS" signature="CleanUpAppium()[pri:0, instance:com.accenture.TestCalculatorF.TestCalculadora@16f7c8c1]" name="CleanUpAppium" is-config="true" duration-ms="2440" started-at="2018-06-10T17:19:54Z" finished-at="2018-06-10T17:19:56Z">
+        <test-method status="FAIL" signature="CleanUpAppium()[pri:0, instance:com.accenture.TestCalculatorF.TestCalculadora@481a15ff]" name="CleanUpAppium" is-config="true" duration-ms="2649" started-at="2018-07-13T14:45:43Z" finished-at="2018-07-13T14:45:45Z">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C\:\\Users\\danny.rojas\\AppData\\Local\\Android\\android-sdk\\platform-tools\\adb.exe -P 5037 -s ZY322P649N shell am force-stop com.google.android.calculator' exited with code 1'; Stderr: 'error: device 'ZY322P649N' not found'; Code: '1' (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.65 seconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CPX-TMNUYIJHXRG', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.google.android.calculator, deviceScreenSize=1080x2160, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ZY322P649N, platform=LINUX, deviceUDID=ZY322P649N, appActivity=com.android.calculator2.CalculatorGoogle, desired={appPackage=com.google.android.calculator, appActivity=com.android.calculator2.CalculatorGoogle, platformVersion=7.0, udid=ZY322P649N, platformName=Android, deviceName=Moto G (5) Plus}, platformVersion=8.0.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=moto g(6) plus, udid=ZY322P649N, platformName=Android, deviceManufacturer=motorola}]
+Session ID: 887287b5-2906-4121-818d-40da971e50eb]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C\:\\Users\\danny.rojas\\AppData\\Local\\Android\\android-sdk\\platform-tools\\adb.exe -P 5037 -s ZY322P649N shell am force-stop com.google.android.calculator' exited with code 1'; Stderr: 'error: device 'ZY322P649N' not found'; Code: '1' (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.65 seconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'CPX-TMNUYIJHXRG', ip: '127.0.0.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{appPackage=com.google.android.calculator, deviceScreenSize=1080x2160, networkConnectionEnabled=true, warnings={}, databaseEnabled=false, deviceName=ZY322P649N, platform=LINUX, deviceUDID=ZY322P649N, appActivity=com.android.calculator2.CalculatorGoogle, desired={appPackage=com.google.android.calculator, appActivity=com.android.calculator2.CalculatorGoogle, platformVersion=7.0, udid=ZY322P649N, platformName=Android, deviceName=Moto G (5) Plus}, platformVersion=8.0.0, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceModel=moto g(6) plus, udid=ZY322P649N, platformName=Android, deviceManufacturer=motorola}]
+Session ID: 887287b5-2906-4121-818d-40da971e50eb
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:235)
+at org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:526)
+at com.accenture.TestCalculatorF.TestCalculadora.CleanUpAppium(TestCalculadora.java:38)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+at org.testng.TestRunner.afterRun(TestRunner.java:725)
+at org.testng.TestRunner.run(TestRunner.java:509)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CleanUpAppium -->

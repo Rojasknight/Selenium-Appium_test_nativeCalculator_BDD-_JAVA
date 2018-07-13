@@ -20,11 +20,11 @@ public class TestCalculadora {
 
 	@BeforeMethod
 	public void setUpAppium() throws MalformedURLException, InterruptedException {
-		String packagename = "de.underflow.calc"; //Paquete principal de la aplicacion a automatizar
+		String packagename = "com.google.android.calculator"; //Paquete principal de la aplicacion a automatizar
 		String URL = "http://127.0.0.1:4723/wd/hub"; //IP y puerto de Appium
-		String activityname = "de.underflow.calc.CalculatorMainActivity"; //Nombre de la actividad (o vista) en donde empezara la automatizacion
+		String activityname = "com.android.calculator2.CalculatorGoogle"; //Nombre de la actividad (o vista) en donde empezara la automatizacion
 		capabilities.setCapability("deviceName", "Moto G (5) Plus"); //No es obligatorio que este nombre coincida
-		capabilities.setCapability("udid", "ZY224CTP8L"); //Serial del dispositivo, se obtiene activando la depuración USB y con el comando adb devices
+		capabilities.setCapability("udid", "ZY322P649N"); //Serial del dispositivo, se obtiene activando la depuración USB y con el comando adb devices
 		capabilities.setCapability("platformVersion", "7.0"); //No es obligatorio que la version coincida
 		capabilities.setCapability("platformName", "Android"); //Nombre del sistema operativo
 		capabilities.setCapability("appPackage", packagename);
@@ -42,42 +42,77 @@ public class TestCalculadora {
 	public void mytest() throws InterruptedException {
 		try {
 			Thread.sleep(2000);
-			// hacer click boton2
-			MobileElement num2 = driver.findElement(By.id("de.underflow.calc:id/Two"));
-			num2.click();
-
-			// hacer click boton mas( +)
-			MobileElement mas = driver.findElement(By.id("de.underflow.calc:id/Plus"));
-			mas.click();
-
-			// hacer click boton9
-			MobileElement num9 = driver.findElement(By.id("de.underflow.calc:id/Nine"));
-			num9.click();
-
-			// hacer click boton mas( +)
-			MobileElement mas1 = driver.findElement(By.id("de.underflow.calc:id/Plus"));
-			mas1.click();
-
-			// hacer click boton8
-			MobileElement num8 = driver.findElement(By.id("de.underflow.calc:id/Eight"));
-			num8.click();
-
-			// hacer click botonigual
-			MobileElement igual = driver.findElement(By.id("de.underflow.calc:id/Equals"));
-			igual.click();
-
-			// hacer click botonigual
-			MobileElement dividido = driver.findElement(By.id("de.underflow.calc:id/Divide"));
-			dividido.click();
-
-			// hacer click boton 2
-			MobileElement numdos = driver.findElement(By.id("de.underflow.calc:id/Two"));
-			numdos.click();
-
-			// hacer click boton =
-			MobileElement igual2 = driver.findElement(By.id("de.underflow.calc:id/Equals"));
-			igual2.click();
-
+			
+			
+			for(Dato informacion: Excel.lectura()) {
+				
+				MobileElement number1 = null;
+				MobileElement operator = null;
+				MobileElement number2 = null;
+				
+				String cadena1 = Integer.toString(informacion.getNumber1());
+				char[] numeros1 = cadena1.toCharArray();
+				
+				String cadena2 = Integer.toString(informacion.getNumber2());
+				char[] numeros2 = cadena2.toCharArray();
+				
+				//
+				
+				//numero1
+				for (int x=0;x<numeros1.length;x++) {
+					number1 = driver.findElement(By.id("com.google.android.calculator:id/digit_" + numeros1[x]));
+					number1.click();
+				}
+					  
+				
+				
+				
+				
+				System.out.println(informacion.getNumber1());
+				
+				System.out.println(informacion.getOperator());
+				
+				System.out.println(informacion.getNumber2());
+				//Operator
+				switch(informacion.getOperator()) {
+				
+				
+				case "*":
+					operator = driver.findElement(By.id("com.google.android.calculator:id/op_mul"));
+					operator.click();
+			        break;
+			        
+			        
+				case "/":
+					operator = driver.findElement(By.id("com.google.android.calculator:id/op_div"));
+					operator.click();
+			        break;
+			        
+				case "-":
+					operator = driver.findElement(By.id("com.google.android.calculator:id/op_sub"));
+					operator.click();
+			        break;
+				}
+				
+				
+				
+				
+			//numero 2
+			for (int x=0;x<numeros2.length;x++) {
+				number2 = driver.findElement(By.id("com.google.android.calculator:id/digit_" + numeros2[x]));
+				number2.click();
+			}
+				
+			//Operator eq
+		    MobileElement eq = driver.findElement(By.id("com.google.android.calculator:id/eq"));
+			eq.click();
+				
+			Thread.sleep(2000);
+		
+			}
+			
+			
+			
 			MobileElement result = driver.findElementById("de.underflow.calc:id/Result");
 			String textResult = result.getText();
 			System.out.print(textResult);
